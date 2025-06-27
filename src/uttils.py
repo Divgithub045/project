@@ -22,18 +22,33 @@ def save_object(file_path, obj):
     except Exception as e:
         raise CustomException(e, sys)
     
-def evaluate_model(x_train,y_train,x_test,y_test,models):
+def evaluate_model(x_train,y_train,x_test,y_test,models,params):
     try:
         report = {}
+        best_model = None
+        best_score = float('-inf')
+        best_model_name = ""
+        best_params = None
         for i in range(len(list(models))):
-            model = list(models.values())[i]
-            model.fit(x_train,y_train)
+            model_name = list(models.values())[i]
+            param=params[list(models.keys())[i]]
+            gs = GridSearchCV(model_name,param,cv=3,scoring='r2')
+            gs.fit(x_train,y_train)
+            model = gs.best_estimator_
             y_train_pred = model.predict(x_train)
             y_test_pred = model.predict(x_test)
             train_model_score = r2_score(y_train,y_train_pred)
             test_model_score=r2_score(y_test,y_test_pred)
             report[list(models.keys())[i]] = test_model_score
-        return report
+            if test_model_score > best_score:
+                best_score = test_model_score
+                best_model = model
+                best_model_name = model_name
+                best_params = gs.best_params_
+
+        print(f"Best Model: {best_model_name}")
+        print(f"Best Parameters: {best_params}")
+        return report,best_model
     except Exception as e:
         raise CustomException(e,sys)
 
