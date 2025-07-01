@@ -6,17 +6,17 @@ A full-stack Machine Learning web application that predicts a student's **math s
 
 ---
 
-## 🚀 Key Highlights
+## Key Highlights
 
-- ✅ **Modular ML Pipeline**: Separated logic for data ingestion, transformation, training, and prediction
-- 🔁 **CI/CD**: Deployed using AWS CodePipeline + CodeBuild with Elastic Beanstalk
-- 🎯 **Model Tuning**: Evaluated 6 regression algorithms across 1000+ hyperparameter combinations
-- 🌐 **Flask Web App**: Intuitive frontend to input features and get real-time predictions
-- 📦 **Production-Ready Structure**: Scalable and maintainable file structure using OOP and clean coding principles
+-  **Modular ML Pipeline**: Separated logic for data ingestion, transformation, training, and prediction
+- **CI/CD**: Deployed using AWS CodePipeline + CodeBuild with Elastic Beanstalk
+- **Model Tuning**: Evaluated 6 regression algorithms across 1000+ hyperparameter combinations
+- **Flask Web App**: Intuitive frontend to input features and get real-time predictions
+- **Production-Ready Structure**: Scalable and maintainable file structure and clean codes
 
 ---
 
-## 🧩 Input Features
+##Input Features
 
 The model predicts math scores based on:
 
@@ -55,7 +55,7 @@ The model predicts math scores based on:
 ├── README.md                       # Project overview
 ├── notes.txt, .gitignore           # Misc files
 ```
-## 🧑‍💻 Author
+##  Author
 
-- 🧭 **Portfolio**: [divyanshsingh.xyz](https://divyanshsingh.xyz)  
-- 💼 **LinkedIn**: [divyanshsinghnrj](https://www.linkedin.com/in/divyanshsinghnrj) 
+-  **Portfolio**: [divyanshsingh.xyz](https://divyanshsingh.xyz)  
+- **LinkedIn**: [divyanshsinghnrj](https://www.linkedin.com/in/divyanshsinghnrj) 
